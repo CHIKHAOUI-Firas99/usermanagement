@@ -11,7 +11,7 @@ environment {
     stage('Build Docker Image') {
       steps {
         script {
-          docker.build("${DOCKER_HUB_USERNAME}/${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG}")
+          docker.build("${DOCKER_HUB_USERNAME}/${DOCKER_IMAGE_NAME}:v${DOCKER_IMAGE_TAG}")
         }
       }
     }  
@@ -19,7 +19,7 @@ environment {
       steps {
         script {
             withDockerRegistry([credentialsId: "docker-credentials", url: ""]) {
-            sh "docker push ${DOCKER_HUB_USERNAME}/${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG}"
+            sh "docker push ${DOCKER_HUB_USERNAME}/${DOCKER_IMAGE_NAME}:v${DOCKER_IMAGE_TAG}"
             }
         }
       }
