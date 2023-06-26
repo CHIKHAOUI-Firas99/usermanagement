@@ -29,7 +29,7 @@ environment {
       steps {
         script {
             withCredentials([file(credentialsId: 'kubeconfig', variable: 'KUBECONFIG')]){
-            sh "helm upgrade usermanagement usermanagement/back1 --set image.tag:v${DOCKER_IMAGE_TAG}"
+            sh "helm upgrade usermanagement usermanagement/back1 --set image.tag:v${DOCKER_IMAGE_TAG} -n helm-test"
         }
        }
       }
