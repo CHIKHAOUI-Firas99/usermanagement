@@ -1,7 +1,7 @@
 pipeline {
   agent any
 environment {
-    KUBECONFIG = "/home/sbm/.kube/kubeconfig"
+    KUBECONFIG = "/home/sbm/.kube/config"
     DOCKER_HUB_USERNAME= "firaschikhaoui"
     DOCKER_IMAGE_NAME = "usermanagment"
     DOCKER_IMAGE_TAG = "${BUILD_NUMBER}"
