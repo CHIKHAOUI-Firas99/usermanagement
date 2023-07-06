@@ -1,6 +1,6 @@
 #!/bin/bash
 pip install --upgrade pip
 pip install -r requirements.txt
-export pylint=$PATH:/var/lib/jenkins/.local/lib/python3.8/site-packages
+export PATH=$HOME/.local/bin:$PATH
 pylint main.py
 
