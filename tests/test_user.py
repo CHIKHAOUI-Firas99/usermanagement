@@ -3,9 +3,9 @@ from main import app
 
 client = TestClient(app)
 data = {
-  "email": "oussemaa7s82@gamil.com",
-  "name": "oussema",
-  "phoneNumber": "+21650993586",
+  "email": "chikhaouifiras1@gamil.com",
+  "name": "firas chikhaoui",
+  "phoneNumber": "+21644557711",
   "role": "admin",
   "authorization": True
 }
