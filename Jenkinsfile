@@ -7,13 +7,17 @@ environment {
     DOCKER_IMAGE_TAG = "${BUILD_NUMBER}"
     //KUBERNETES_CA_CERTIFICATE = credentials('kube-certif')
   }
-stage('Linting and Code Quality') {
-  steps {
-//    sh 'flake8 app'
-    sh 'pylint app'
-  }
-}
    stages {
+
+     stage('Linting and Code Quality') {
+      steps {
+     script{
+          sh 'pylint app'
+         }
+      }
+     }
+
+
     stage('Build Docker Image') {
       steps {
         script {
