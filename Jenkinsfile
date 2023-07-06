@@ -12,7 +12,7 @@ environment {
      stage('Linting and Code Quality') {
       steps {
      script{
-          sh 'pylint app'
+          sh 'bash ./lintpython.sh'
          }
       }
      }
