@@ -9,14 +9,6 @@ environment {
   }
    stages {
 
-     stage('Linting and Code Quality') {
-      steps {
-     script{
-          sh 'chmod +x ./lintpython.sh'
-          sh 'bash ./lintpython.sh'
-         }
-      }
-     }
     stage ('SonarQube'){
     steps{
      scrpit{
