@@ -21,7 +21,7 @@ environment {
     steps{
      scrpit{
         sonar-scanner \
-  	ssh """ -Dsonar.projectKey=usermanagement \
+  	sh """ -Dsonar.projectKey=usermanagement \
   	        -Dsonar.sources=. \
   	        -Dsonar.host.url=http://192.168.162.104:9000 \
   	        -Dsonar.login=d8f04174ecc1ef5650338a7899cbea00c7062f25"""
