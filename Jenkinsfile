@@ -9,9 +9,6 @@ environment {
   }
    stages {
 
-    stage ('SonarQube'){
-    steps{
-     scrpit{
 stage('SonarQube') {
     steps {
         script {
