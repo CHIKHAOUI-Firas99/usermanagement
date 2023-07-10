@@ -12,11 +12,13 @@ environment {
 stage('SonarQube') {
     steps {
         script {
+          withSonarQubeEnv (installationName:'SonarQube'){
             sh """sonar-scanner \
                 -Dsonar.projectKey=usermanagement \
                 -Dsonar.sources=. \
                 -Dsonar.host.url=http://192.168.162.104:9000 \
                 -Dsonar.login=d8f04174ecc1ef5650338a7899cbea00c7062f25"""
+          }
         }
     }
 }
