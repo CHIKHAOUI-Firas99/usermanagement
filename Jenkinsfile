@@ -13,7 +13,8 @@ stage('SonarQube') {
     steps {
         script {
           withSonarQubeEnv (installationName:'SonarQube'){
-            sh """sonar-scanner \
+            sh """ export PATH="$PATH:/opt/sonar-scanner/bin"
+                sonar-scanner \
                 -Dsonar.projectKey=usermanagement \
                 -Dsonar.sources=. \
                 -Dsonar.host.url=http://192.168.162.104:9000 \
