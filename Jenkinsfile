@@ -4,7 +4,7 @@ environment {
     KUBECONFIG = "/home/sbm/.kube/config"
     DOCKER_HUB_USERNAME= "firaschikhaoui"
     DOCKER_IMAGE_NAME = "usermanagment"
-    DOCKER_IMAGE_TAG = "v37"
+    DOCKER_IMAGE_TAG = "${BUILD_NUMBER}"
     //KUBERNETES_CA_CERTIFICATE = credentials('kube-certif')
   }
    stages {
